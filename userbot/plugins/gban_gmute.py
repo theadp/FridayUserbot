@@ -40,8 +40,7 @@ async def gspider(userbot):
     if user:
         if user.id == 1263617196:
             return await friday.edit(
-                f"**Didn't , Your Father Teach You ? That You Cant Gban Dev**"
-            )
+                f"**Didn't , Your Father Teach You ? That You Cant Gban Dev**")
         try:
             from userbot.modules.sql_helper.gmute_sql import gmute
         except:
@@ -51,22 +50,25 @@ async def gspider(userbot):
         except:
             pass
         testuserbot = [
-            d.entity.id
-            for d in await userbot.client.get_dialogs()
+            d.entity.id for d in await userbot.client.get_dialogs()
             if (d.is_group or d.is_channel)
         ]
         for i in testuserbot:
             try:
-                await userbot.client.edit_permissions(i, user, view_messages=False)
+                await userbot.client.edit_permissions(i,
+                                                      user,
+                                                      view_messages=False)
                 a += 1
-                await friday.edit(f"**GBANNED // Total Affected Chats **: `{a}`")
+                await friday.edit(
+                    f"**GBANNED // Total Affected Chats **: `{a}`")
             except:
                 b += 1
     else:
         await friday.edit(f"**Reply to a user !!**")
     try:
         if gmute(user.id) is False:
-            return await friday.edit(f"**Error! User probably already gbanned.**")
+            return await friday.edit(
+                f"**Error! User probably already gbanned.**")
     except:
         pass
     return await friday.edit(
@@ -117,13 +119,14 @@ async def gspider(userbot):
         except:
             pass
         testuserbot = [
-            d.entity.id
-            for d in await userbot.client.get_dialogs()
+            d.entity.id for d in await userbot.client.get_dialogs()
             if (d.is_group or d.is_channel)
         ]
         for i in testuserbot:
             try:
-                await userbot.client.edit_permissions(i, user, send_messages=True)
+                await userbot.client.edit_permissions(i,
+                                                      user,
+                                                      send_messages=True)
                 a += 1
                 await friday.edit(f"**UNGBANNING // AFFECTED CHATS - {a} **")
             except:
@@ -132,7 +135,8 @@ async def gspider(userbot):
         await friday.edit("**Reply to a user !!**")
     try:
         if ungmute(user.id) is False:
-            return await friday.edit("**Error! User probably already ungbanned.**")
+            return await friday.edit(
+                "**Error! User probably already ungbanned.**")
     except:
         pass
     return await friday.edit(
@@ -140,9 +144,9 @@ async def gspider(userbot):
     )
 
 
-CMD_HELP.update(
-    {
-        "gban-gmute": ".gban <username> / <userid> / <reply to a user>\
+CMD_HELP.update({
+    "gban-gmute":
+    ".gban <username> / <userid> / <reply to a user>\
 \n**Usage**: Globel ban the person in all groups, channels , block in pm , add gban watch (use with solution) \
 \n\n.ungban <username> / <userid> / <reply to a user>\
 \n**Usage**: unban user from all groups, channels , remove user from gban watch.\
@@ -152,5 +156,4 @@ CMD_HELP.update(
 \n**Usage**: Remove user form gmute list \
 \n\n**All commands support sudo**\
 "
-    }
-)
+})
