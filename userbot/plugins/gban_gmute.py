@@ -1,6 +1,7 @@
 # GOT FROM HERE https://t.me/pldhsys/358 ( JAVES USERBOT ) ( MAIN CREATOR )
 # PORTED BY @STARKXD
-from telethon.tl.functions.contacts import BlockRequest, UnblockRequest
+from telethon.tl.functions.contacts import BlockRequest
+from telethon.tl.functions.contacts import UnblockRequest
 
 from userbot import CMD_HELP
 

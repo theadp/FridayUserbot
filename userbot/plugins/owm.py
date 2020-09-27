@@ -4,7 +4,6 @@
 # you may not use this file except in compliance with the License.
 #
 """ Userbot module for getting the weather of a city. """
-
 import json
 from datetime import datetime
 
@@ -15,7 +14,8 @@ from pytz import timezone as tz
 
 from userbot import CMD_HELP
 from userbot import OPEN_WEATHER_MAP_APPID as OWM_API
-from userbot.events import errors_handler, register
+from userbot.events import errors_handler
+from userbot.events import register
 
 # ===== CONSTANT =====
 DEFCITY = "Ahmedabad"

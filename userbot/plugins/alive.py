@@ -2,10 +2,12 @@
 # IMG CREDITS: @WhySooSerious
 import time
 
-from uniborg.util import admin_cmd, sudo_cmd
+from uniborg.util import admin_cmd
+from uniborg.util import sudo_cmd
 
 from userbot import ALIVE_NAME
-from userbot.plugins.timefunc import get_readable_time, uptimebot
+from userbot.plugins.timefunc import get_readable_time
+from userbot.plugins.timefunc import uptimebot
 
 uptime = get_readable_time((time.time() - uptimebot))
 issudousing = Config.SUDO_USERS
